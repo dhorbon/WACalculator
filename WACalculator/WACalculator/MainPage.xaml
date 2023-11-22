@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WACalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Entry
+                x:Name="input"
+                Placeholder="Enter query"
+                />
+
+            <Button
+                x:Name="button"
+                Text="Query Wolfram" 
+                Clicked="Submit"/>
+
+            <Label
+                x:Name="output"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
