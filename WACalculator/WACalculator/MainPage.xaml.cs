@@ -1,48 +1,90 @@
-﻿using System.Text.Json;
+﻿using System.Diagnostics;
+using System.Text.Json;
 
 namespace WACalculator
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-        HttpClient client = new();
-
+        private List<(string, string)> history = new();
         public MainPage()
         {
             InitializeComponent();
-            
-            client.BaseAddress = new Uri("http://api.wolframalpha.com/v1/");
         }
 
-        private void Submit(object sender, EventArgs e)
+        private void Submit(object sender, EventArgs e) =>
+            Submit("");
+        private void Submit(string query)
         {
-            Query query = new Query(input.Text);
+            HttpClient client = new HttpClient();
 
-            var json = JsonSerializer.Serialize(query);
+            string uriString = "http://api.wolframalpha.com/v1/result?appid=LJQJLL-V8UX7J2499&i=";
 
-            output.Text += json;
+            if (query == "")
+            {
+                uriString += input.Text.Replace(' ', '+');
+            }
+            else
+            {
+                uriString += query.Replace(' ', '+');
+            }
 
-
-            /*
-            StringContent stringContent = new StringContent(json);
-
-            output.Text += stringContent.ReadAsStringAsync().Result;
-
-            var response = client.PostAsync("result", stringContent).Result;
+            Debug.WriteLine(uriString);
             
-
+            Uri uri = new Uri(uriString);
+  
+            var response = client.GetAsync(uri).Result;
+            
             if (response.IsSuccessStatusCode)
             {
                 var responseContent = response.Content.ReadAsStringAsync().Result;
 
-                output.Text += responseContent;
+                output.Text = responseContent;
+
+                history.Add((input.Text, responseContent));
             }
             else
             {
-                output.Text += "error: " + response.StatusCode;
+                output.Text = $"error: {response.StatusCode}";
                 
             }
-            */
+        }
+
+        private async void Save(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = await FilePicker.PickAsync();
+
+                string text = "";
+                for (int i = 0; i < history.Count; i++)
+                {
+                    text += $"{history[i].Item1}: {history[i].Item2}\n";
+                }
+
+                var streamWriter = new StreamWriter(File.OpenWrite(result.FullPath));
+                streamWriter.Write(text);
+                streamWriter.Close();
+
+                ioMessage.Text = "Saved succesfully";
+            }
+            catch
+            {
+                ioMessage.Text = "Save failed";
+            }
+        }
+
+        private async void Read(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = await FilePicker.PickAsync();
+
+                Submit(new StreamReader(File.OpenRead(result.FullPath)).ReadLine());
+            }
+            catch
+            {
+                ioMessage.Text = "Read operation failed";
+            }
         }
     }
 }

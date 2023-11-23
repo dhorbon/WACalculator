@@ -29,13 +29,13 @@
     <AppXManifest Include="E:\projects\WACalculator\WACalculator\WACalculator\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-22T20:32:51.898</Modified>
+      <Modified>2023-11-23T17:15:46.666</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\projects\WACalculator\WACalculator\WACalculator\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-22T20:32:51.665</Modified>
+      <Modified>2023-11-23T17:14:46.216</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\projects\WACalculator\WACalculator\WACalculator\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WACalculator.runtimeconfig.json">
       <PackagePath>WACalculator.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\projects\WACalculator\WACalculator\WACalculator\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WACalculator.dll">
       <PackagePath>WACalculator.dll</PackagePath>
-      <Modified>2023-11-22T20:32:50.267</Modified>
+      <Modified>2023-11-23T17:15:46.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\projects\WACalculator\WACalculator\WACalculator\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>WACalculator.exe</PackagePath>
-      <Modified>2023-11-22T20:32:50.463</Modified>
+      <Modified>2023-11-23T17:15:46.370</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\projects\WACalculator\WACalculator\WACalculator\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

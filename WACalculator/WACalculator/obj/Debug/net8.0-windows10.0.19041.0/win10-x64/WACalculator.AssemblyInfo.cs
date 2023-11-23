@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WACalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+6d1d2d1d670abe70ed89f2b71b7b7850db7967ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d654120887c8f216f888844602057e68d8de2dbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("WACalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WACalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

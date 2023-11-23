@@ -175,3 +175,4 @@ E:\projects\WACalculator\WACalculator\WACalculator\obj\Debug\net8.0-windows10.0.
 E:\projects\WACalculator\WACalculator\WACalculator\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 E:\projects\WACalculator\WACalculator\WACalculator\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 E:\projects\WACalculator\WACalculator\WACalculator\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+E:\projects\WACalculator\WACalculator\WACalculator\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\WACalculator.sourcelink.json

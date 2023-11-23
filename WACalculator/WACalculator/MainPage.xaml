@@ -8,6 +8,21 @@
             Padding="30,0"
             Spacing="25">
 
+            <HorizontalStackLayout>
+                <Button
+                    x:Name="save"
+                    Text="Save history to .txt file"
+                    Clicked="Save"/>
+
+                <Button
+                    x:Name="read"
+                    Text="Read query from .txt file"
+                    Clicked="Read"/>
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="ioMessage"/>
+
             <Entry
                 x:Name="input"
                 Placeholder="Enter query"
